@@ -1,15 +1,3 @@
-"""
-main.py — Armatrix Team API
-FastAPI application entry point.
-
-Run locally:
-    uvicorn main:app --reload --port 8000
-
-Interactive docs available at:
-    http://localhost:8000/docs   (Swagger UI)
-    http://localhost:8000/redoc  (ReDoc)
-"""
-
 from fastapi import FastAPI, HTTPException, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
@@ -111,18 +99,6 @@ def list_members(
     total = crud.count_members(db)
     return {"total": total, "members": members}
 
-
-@app.get(
-    "/team/{member_id}",
-    response_model=schemas.TeamMemberResponse,
-    tags=["Team Members"],
-    summary="Get a single team member",
-)
-def get_member(member_id: int, db: Session = Depends(get_db)):
-    member = crud.get_member(db, member_id)
-    if not member:
-        raise HTTPException(status_code=404, detail=f"Team member with id={member_id} not found.")
-    return member
 
 
 @app.post(
