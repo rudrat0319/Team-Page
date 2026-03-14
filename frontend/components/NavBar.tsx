@@ -19,7 +19,7 @@ export default function NavBar() {
       }}
     >
       {/* Armatrix Logo */}
-      <Link href="https://armatrix.in" aria-label="Armatrix Home">
+      <Link href="https://armatrix.in" aria-label="Armatrix Home" className="logo-hover">
         <Image
           src="/armatrix-logo.png"
           alt="Armatrix"
