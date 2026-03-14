@@ -27,7 +27,7 @@ export interface TeamMemberListResponse {
  */
 export async function fetchTeamMembers(): Promise<TeamMember[]> {
   try {
-    const res = await fetch(`${API_BASE_URL}/team`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/team`, {
       next: { revalidate: 60 }, // ISR — refresh every 60 s
     });
 
