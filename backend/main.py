@@ -29,12 +29,11 @@ app = FastAPI(
 )
 
 # ── CORS ──────────────────────────────────────────────────────────────────────
-# Allow all origins in development. In production, replace "*" with your
-# Vercel deployment URL, e.g. "https://armatrix-team.vercel.app"
+# Allow all origins in development. In production, replace
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],          # ← Replace with Vercel URL before going live
+    allow_origins=["https://team-page-orpin.vercel.app/"],   
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
