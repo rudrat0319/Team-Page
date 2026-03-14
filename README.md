@@ -1,10 +1,10 @@
 # Armatrix Team Page
 
-A premium, interactive Team Page built with **FastAPI** (Backend) and **Next.js 16** (Frontend). Designed for clarity, speed, and visual excellence.
+A premium, interactive Team Page built with **FastAPI** (Backend) and **Next.js 15** (Frontend). Designed for clarity, speed, and visual excellence.
 
 ## 📁 Project Structure
 - `/backend`: FastAPI Python server with SQLite storage.
-- `/frontend`: Next.js 16 React app with Tailwind CSS v4 & custom canvas animations.
+- `/frontend`: Next.js 15 React app with Tailwind CSS v4 & custom canvas animations.
 
 ---
 
@@ -26,7 +26,7 @@ A premium, interactive Team Page built with **FastAPI** (Backend) and **Next.js 
    ```
 4. **Run the server**:
    ```bash
-   python -m uvicorn main:app --port 8000
+   python -m uvicorn main:app --port 8000 --reload
    ```
    *Note: Uses SQLite locally (`armatrix_team.db`). No external DB configuration needed.*
 
@@ -54,11 +54,6 @@ The backend is a standard **REST API** that accepts and outputs **JSON**.
 - **Requests**: Send `Content-Type: application/json` for POST/PUT.
 - **Responses**: All data is returned as JSON objects/arrays.
 
-### Interactive Docs (Testing)
-FastAPI provides built-in interactive documentation for testing every endpoint:
-- **Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
-- **ReDoc**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
-
 ### Key Endpoints
 | Method | Endpoint | Description |
 |---|---|---|
@@ -68,6 +63,10 @@ FastAPI provides built-in interactive documentation for testing every endpoint:
 | `DELETE` | `/team/{id}` | Remove a member |
 
 ---
+
+## 🌐 Live Demo
+- **Frontend**: https://your-project.vercel.app/team
+- **Backend API**: https://armatrix-team-api.onrender.com/docs
 
 ## 🎨 Design & Engineering Decisions
 
