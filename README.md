@@ -64,6 +64,11 @@ The backend is a standard **REST API** that accepts and outputs **JSON**.
 
 ---
 
+### Interactive Docs (Testing)
+FastAPI provides built-in interactive documentation for testing every endpoint:
+- **Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
+- **ReDoc**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
+
 ## 🌐 Live Demo
 - **Frontend**: [https://team-page-orpin.vercel.app/](https://team-page-orpin.vercel.app/)
 - **Backend API**: https://team-page-t267.onrender.com/
