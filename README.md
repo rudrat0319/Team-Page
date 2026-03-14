@@ -65,8 +65,8 @@ The backend is a standard **REST API** that accepts and outputs **JSON**.
 ---
 
 ## 🌐 Live Demo
-- **Frontend**: https://your-project.vercel.app/team
-- **Backend API**: https://armatrix-team-api.onrender.com/docs
+- **Frontend**: [https://team-page-orpin.vercel.app/](https://team-page-orpin.vercel.app/)
+- **Backend API**: https://team-page-t267.onrender.com/
 
 ## 🎨 Design & Engineering Decisions
 
