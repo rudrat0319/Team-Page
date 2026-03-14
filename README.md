@@ -47,16 +47,38 @@ A premium, interactive Team Page built with **FastAPI** (Backend) and **Next.js 
 
 ---
 
+## 🛠️ API & Data Layer
+
+### JSON Standard
+The backend is a standard **REST API** that accepts and outputs **JSON**. 
+- **Requests**: Send `Content-Type: application/json` for POST/PUT.
+- **Responses**: All data is returned as JSON objects/arrays.
+
+### Interactive Docs (Testing)
+FastAPI provides built-in interactive documentation for testing every endpoint:
+- **Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
+- **ReDoc**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
+
+### Key Endpoints
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/team` | List all team members (Paginated) |
+| `POST` | `/team` | Add a new member (JSON Body required) |
+| `PUT` | `/team/{id}` | Update existing member (Partial JSON supported) |
+| `DELETE` | `/team/{id}` | Remove a member |
+
+---
+
 ## 🎨 Design & Engineering Decisions
+
+### Zero-Hassle Data Layer
+- **No External DB**: SQLite provides a file-based database (`armatrix_team.db`) that requires zero configuration while keeping data persistent across restarts.
+- **Frontend Logic**: Optimized as a read-only display. All data management (Add/Edit) is handled via the endpoints listed above (using Postman or the /docs UI).
 
 ### Visual High-Lights
 - **Animated Canvas Rays**: Custom HTML5 Canvas animation in the Hero section, featuring pulsing rays in **Pink (#F5AEAE)** and **Blue (#2060DF)**.
-- **Precision Typography**: Paired **Space Grotesk** (Engineering/Tech feel for headings) with **Inter** (Readability for body).
-- **CTA Craftsmanship**: The "Get in Touch" button uses a dual-layer pill design with a white-to-dark gradient border and a nested black core with a 3px gap.
-
-### Zero-Hassle Data Layer
-- **Local Persistence**: SQLite provides a file-based database that requires zero configuration, zero environment variables, and no external URLs while keeping your data persistent across restarts.
-- **Frontend Logic**: Optimized as a read-only display. Data Management (Add/Edit Members) is designed to be handled via the Backend API (Postman/Render Dashboard).
+- **Precision Typography**: Paired **Space Grotesk** (Engineering feel for headings) with **Inter** (Readability for body).
+- **CTA Craftsmanship**: The "Get in Touch" button uses a dual-layer pill design with a white-to-dark gradient border and a 3px gap.
 
 ### Logo Handling
-- **Dynamic Theming**: The Armatrix logo asset uses CSS blend modes (`screen`/`multiply`) to automatically handle transparency and contrast across different section backgrounds without needing manual background removal.
+- **Dynamic Theming**: The Armatrix logo asset uses CSS blend modes (`screen`/`multiply`) to handle transparency and contrast automatically across light/dark backgrounds.
